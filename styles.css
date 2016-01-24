@@ -48,8 +48,12 @@
     font-size: 20px;
 }
 
-.suggestion-wrapper {
+.wrapper .suggestion-wrapper {
     margin-bottom: 30px;
+}
+
+.wrapper .big-text {
+    font-size: 20px;
 }
 
 /*.wrapper .suggestion {

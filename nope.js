@@ -66,15 +66,17 @@ const Success = () => {
         <div>
             <h1>Thanks for your non-support!</h1>
 
-            <p>
-                We'll look in to raising money for things like:
-            </p>
+            <div className="big-text">
+                <p>
+                    We'll look in to raising money for things like:
+                </p>
 
-            <Suggestions />
+                <Suggestions />
 
-            <p>
-                To help top this project once and for all.
-            </p>
+                <p>
+                    To help top this project once and for all.
+                </p>
+            </div>
         </div>
     )
 }
