@@ -1,3 +1,43 @@
-.wrapper p {
-    color: #999;
+.wrapper .zerobackers {
+    color: #006900;
+    background-color: #62E862;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 20px;
 }
+
+.wrapper .zerobackers strong {
+
+}
+
+.wrapper .c-img {
+    max-width: 100%;
+}
+
+.wrapper .h-flex {
+    display: flex;
+}
+
+.wrapper .img-wrapper {
+    width: 300px;
+    margin-right: 30px;
+}
+
+.wrapper .light-text {
+    color: #666;
+}
+
+.mysubmitbtn {
+    padding: 10px;
+    color: #efefef;
+    background-color: #333;
+    border: none;
+}
+
+/*.wrapper .suggestion {
+    background: #efefef;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}*/
