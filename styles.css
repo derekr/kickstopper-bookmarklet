@@ -19,7 +19,7 @@
 }
 
 .wrapper .img-wrapper {
-    width: 300px;
+    width: 40%;
     margin-right: 30px;
 }
 
@@ -27,11 +27,15 @@
     color: #666;
 }
 
-.mysubmitbtn {
+.wrapper .mysubmitbtn {
     padding: 10px;
     color: #efefef;
     background-color: #333;
     border: none;
+}
+
+.wrapper .mysubmitbtn:hover {
+    color: #fff;
 }
 
 /*.wrapper .suggestion {
