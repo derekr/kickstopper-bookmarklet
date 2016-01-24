@@ -3,13 +3,40 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <style media="screen">
+            .button {
+                display: block;
+                font-family: "Open Sans";
+                width: 300px;
+                padding: 30px;
+                font-size: 50px;
+                font-weight: 700;
+                background-color: #333;
+                color: #efefef;
+                border-radius: 10px;
+                text-decoration: none;
+                text-align: center;
+                margin: 50px auto;
+            }
+
+            .p {
+                text-align: center;
+                font-family: "Open Sans";
+                font-size: 20px;
+            }
+        </style>
     </head>
-    <!-- //derekr.github.io/kickstopper-bookmarklet/nope.js -->
+    <!-- https://derekr.github.io/kickstopper-bookmarklet/build/nope.js -->
     <body>
         <a href="javascript: (function () {
     var jsCode = document.createElement('script');
-    jsCode.setAttribute('src', 'https://derekr.github.io/kickstopper-bookmarklet/build/nope.js');
+    jsCode.setAttribute('src', '/build/nope.js');
   document.body.appendChild(jsCode);
- }());">Nope</a>
+ }());" class="button">Nope</a>
+
+        <p class="p">
+            Drag this ^ in to your bookmarks bar!
+        </p>
     </body>
 </html>

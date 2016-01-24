@@ -5,8 +5,8 @@
   "main": "nope.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "watchify nope.js -o build/nope.js -t [ babelify --presets [ es2015 react ] ] -dv & http-server",
-    "build": "mkdir -p build && browserify ./nope.js -o build/nope.js -t [ babelify --presets [ es2015 react ] ]"
+    "start": "watchify nope.js -o build/nope.js -t [ babelify --presets [ es2015 react ] ] -t browserify-css -dv & http-server",
+    "build": "mkdir -p build && browserify ./nope.js -o build/nope.js -t [ babelify --presets [ es2015 react ] ] -t browserify-css"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "dependencies": {
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
+    "browserify-css": "^0.8.4",
     "http-server": "^0.8.5",
     "isomorphic-fetch": "^2.2.1",
     "nodemon": "^1.8.1",
