@@ -28,9 +28,9 @@ const Suggestions = () => {
     ]
 
     return (
-        <div>{_suggestions.map((s, i) => {
+        <div className="suggestion-wrapper">{_suggestions.map((s, i) => {
             return (<div key={ i } className="suggestion">
-                + <strong>{ s.title }</strong>
+                - <strong>{ s.title }</strong>
             </div>)
         })}</div>
     )
@@ -50,12 +50,10 @@ const Project = (props) => {
                     { message }
                 </div>
                 <div>
-                    <Suggestions />
+                    <label className="mylabel">Why should we stop this project?</label>
+                    <textarea placeholder="Isn't it obvious?" className="mytextarea"></textarea>
 
-                    <label className="mylabel">Suggest your own ways to stop this project:</label>
-                    <textarea placeholder="" className="mytextarea"></textarea>
-
-                    <button className="mysubmitbtn">Kickstop This Project</button>
+                    <button className="mysubmitbtn" onClick={ props.onSubmit }>Kickstop This Project</button>
                 </div>
             </div>
 
@@ -63,9 +61,27 @@ const Project = (props) => {
     )
 }
 
+const Success = () => {
+    return (
+        <div>
+            <h1>Thanks for your non-support!</h1>
+
+            <p>
+                We'll look in to raising money for things like:
+            </p>
+
+            <Suggestions />
+
+            <p>
+                To help top this project once and for all.
+            </p>
+        </div>
+    )
+}
+
 const App = React.createClass({
     getInitialState() {
-        return { project: null }
+        return { project: null, success: false }
     },
 
     componentDidMount() {
@@ -78,6 +94,10 @@ const App = React.createClass({
         })
     },
 
+    handleSubmit() {
+        this.setState({ success: true })
+    },
+
     render() {
         const modalStyles = {
             zIndex: 100000
@@ -85,7 +105,7 @@ const App = React.createClass({
 
         return (
             <Modal isOpen className="wrapper" style={{ content: modalStyles }}>
-              { this.state.project ? <Project { ...this.state.project } /> : 'Fetching project…' }
+              { this.state.success ? <Success /> : <Project { ...this.state.project } onSubmit={ this.handleSubmit } /> }
             </Modal>
         )
     }
