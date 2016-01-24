@@ -22,7 +22,7 @@ const fetchKSDetails = (url, callback) => {
 
 const Suggestions = () => {
     const _suggestions = [
-        { title: 'Defaming Facebook Ads', desc: 'Launch a Facebook Ad campaign...', amount: 50 },
+        { title: 'Facebook Ads Defamation', desc: 'Launch a Facebook Ad campaign...', amount: 50 },
         { title: 'Cease + Desist', desc: 'Let someone smarter figure out how to legally put an end to this shit...', amount: 10000 },
         { title: 'Hire North Korean Hackers' }
     ]
@@ -30,7 +30,7 @@ const Suggestions = () => {
     return (
         <div>{_suggestions.map((s, i) => {
             return (<div key={ i } className="suggestion">
-                <input type="checkbox" /> <strong>{ s.title }</strong>
+                + <strong>{ s.title }</strong>
             </div>)
         })}</div>
     )
@@ -52,10 +52,10 @@ const Project = (props) => {
                 <div>
                     <Suggestions />
 
-                    <label>Why should we stop this project?</label>
-                    <textarea placeholder="Isn't it obvious?"></textarea>
+                    <label className="mylabel">Suggest your own ways to stop this project:</label>
+                    <textarea placeholder="" className="mytextarea"></textarea>
 
-                    <button className="mysubmitbtn">Stop { props.campaign_name }</button>
+                    <button className="mysubmitbtn">Kickstop This Project</button>
                 </div>
             </div>
 

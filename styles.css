@@ -32,10 +32,19 @@
     color: #efefef;
     background-color: #333;
     border: none;
+    font-size: 18px;
 }
 
 .wrapper .mysubmitbtn:hover {
     color: #fff;
+}
+
+.wrapper .mylabel {
+    font-size: 20px;
+}
+
+.wrapper .mytextarea {
+    font-size: 20px;
 }
 
 /*.wrapper .suggestion {
