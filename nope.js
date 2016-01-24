@@ -82,8 +82,12 @@ const App = React.createClass({
     },
 
     render() {
+        const modalStyles = {
+            zIndex: 100000
+        }
+
         return (
-            <Modal isOpen className="wrapper" style={{ zIndex: 1000 }}>
+            <Modal isOpen className="wrapper" style={{ content: modalStyles }}>
               { this.state.project ? <Project { ...this.state.project } /> : 'Fetching project…' }
             </Modal>
         )
