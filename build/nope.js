@@ -21482,7 +21482,7 @@ var Success = function Success() {
             _react2.default.createElement(
                 'p',
                 null,
-                'To help top this project once and for all.'
+                'To help stop this project once and for all.'
             )
         )
     );

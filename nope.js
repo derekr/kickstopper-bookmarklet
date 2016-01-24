@@ -74,7 +74,7 @@ const Success = () => {
                 <Suggestions />
 
                 <p>
-                    To help top this project once and for all.
+                    To help stop this project once and for all.
                 </p>
             </div>
         </div>
